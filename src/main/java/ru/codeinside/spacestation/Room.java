@@ -1,7 +1,7 @@
 package ru.codeinside.spacestation;
 
-public interface Lightning {
+public interface Room {
     void turnOn();
     void turnOff();
-    boolean value();
+    boolean isLightOn();
 }

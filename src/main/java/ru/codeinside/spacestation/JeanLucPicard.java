@@ -2,10 +2,10 @@ package ru.codeinside.spacestation;
 
 public class JeanLucPicard implements Captain {
 
-    private final StateroomVisiting stateroomVisiting;
+    private final Spaceship spaceship;
 
-    public JeanLucPicard(StateroomVisiting stateroomVisiting) {
-        this.stateroomVisiting = stateroomVisiting;
+    public JeanLucPicard(Spaceship spaceship) {
+        this.spaceship = spaceship;
     }
 
     @Override

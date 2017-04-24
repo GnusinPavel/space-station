@@ -1,7 +1,7 @@
 package ru.codeinside.spacestation;
 
-public interface StateroomVisiting {
+public interface Spaceship {
     void next();
-    Lightning current();
+    Room current();
     void previous();
 }

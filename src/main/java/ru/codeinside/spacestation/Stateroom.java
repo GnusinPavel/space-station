@@ -1,6 +1,6 @@
 package ru.codeinside.spacestation;
 
-public class Stateroom implements Lightning {
+public class Stateroom implements Room {
     private boolean theLightIsOn;
 
     public Stateroom(boolean theLightIsOn) {
@@ -18,7 +18,7 @@ public class Stateroom implements Lightning {
     }
 
     @Override
-    public boolean value() {
+    public boolean isLightOn() {
         return theLightIsOn;
     }
 }

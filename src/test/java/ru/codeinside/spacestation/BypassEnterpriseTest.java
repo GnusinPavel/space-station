@@ -10,7 +10,7 @@ import org.junit.runners.Parameterized.Parameters;
 import java.util.*;
 
 @RunWith(Parameterized.class)
-public class BypassSpaceStationTest extends Assert {
+public class BypassEnterpriseTest extends Assert {
 
     @Parameter
     public int stateRoomsNumber;
@@ -23,17 +23,17 @@ public class BypassSpaceStationTest extends Assert {
     @Test
     public void howManyStaterooms() throws Exception {
         final int actualRoomsNumber = new JeanLucPicard(
-                new SpaceStation(
-                        randomLightnings()
+                new Enterprise(
+                        randomRooms()
                 )
         ).stateroomsNumber();
 
         assertEquals(stateRoomsNumber, actualRoomsNumber);
     }
 
-    private List<Lightning> randomLightnings() {
+    private List<Room> randomRooms() {
         Random random = new Random(System.currentTimeMillis());
-        final List<Lightning> rooms = new ArrayList<>(stateRoomsNumber);
+        final List<Room> rooms = new ArrayList<>(stateRoomsNumber);
         for (int i = 0; i < stateRoomsNumber; i++) {
             int someRandomInt = random.nextInt(1000);
             rooms.add(new Stateroom(someRandomInt > 500));
